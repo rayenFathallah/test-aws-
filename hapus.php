@@ -6,7 +6,7 @@ if (isset($_POST['deletedata'])) {
     $id = $_POST['delete_id'];
 
     // query hapus
-    $sql = "DELETE FROM mahasiswa WHERE id = '$id'";
+    $sql = "DELETE FROM users WHERE id = '$id'";
     $query = mysqli_query($db, $sql);
 
     // apa query berhasil dihapus?

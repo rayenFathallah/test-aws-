@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Belajar Dasar CRUD dengan PHP dan MySQL">
-    <title>Data Mahasiswa</title>
+    <title>Data users</title>
 
     <!-- bootstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -45,15 +45,15 @@
 
 
     <div class="container mt-5">
-        <!-- form tambah mahasiswa -->
+        <!-- form tambah users -->
         <div class="card mb-5">
             <!-- <div class="card-header">
                 Latihan CRUD PHP & MySQL
             </div> -->
             <!-- tambah data -->
             <div class="card-body">
-                <h3 class="card-title">Tambah Data Mahasiswa</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque facere, delectus perferendis quos vel deleniti velit laborum eligendi esse quasi, nesciunt accusantium. Obcaecati impedit, deleniti totam cum recusandae rem placeat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate deserunt magnam libero veritatis quisquam nobis! Odit cupiditate, minima consequatur expedita nulla dolor eos fuga. Blanditiis, repudiandae. Nemo harum cupiditate eum?</p>
+                <h3 class="card-title">Tambah Data users</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque facere, delectus perferendis quos vel deleniti velit laborum eligendi esse quasi, nesciunt accusantium. Obcaecati impedit, deleniti totam cum recusandae rem placeat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate deserunt magnam libero veritatis quisquam nobis! Odit cupiditate, miNumbera consequatur expedita nulla dolor eos fuga. Blanditiis, repudiandae. Nemo harum cupiditate eum?</p>
 
                 <!-- tampilkan pesan sukses ditambah -->
                 <?php if (isset($_GET['status'])) : ?>
@@ -75,52 +75,51 @@
                 <form class="row g-3" action="tambah.php" method="POST">
 
                     <div class="col-12">
-                        <label for="nama" class="form-label">Nama</label>
-                        <input type="text" name="nama" class="form-control" placeholder="Steve Jobs" required>
+                        <label for="name" class="form-label">name</label>
+                        <input type="text" name="name" class="form-control" placeholder="Steve Jobs" required>
                     </div>
                     <div class="col-md-4">
-                        <label for="NIM" class="form-label">NIM</label>
-                        <input type="text" name="NIM" class="form-control" placeholder="G64190021" required>
+                        <label for="Number" class="form-label">Number</label>
+                        <input type="text" name="Number" class="form-control" placeholder="G64190021" required>
                     </div>
 
                     <div class="col-md-4">
-                        <label for="Agama" class="form-label">Agama</label>
-                        <select class="form-select" name="agama" aria-label="Default select example">
-                            <option value="Hindu">Hindu</option>
-                            <option value="Buddha">Buddha</option>
-                            <option value="Islam">Islam</option>
-                            <option value="Konghucu">Konghucu</option>
-                            <option value="Protestan">Protestan</option>
-                            <option value="Katolik">Katolik</option>
+                        <label for="Education" class="form-label">Education</label>
+                        <select class="form-select" name="Education" aria-label="Default select example">
+                            <option value="High school">High school</option>
+                            <option value="Bachelor">Bachelor</option>
+                            <option value="Graduate">Graduate</option>
+                            <option value="Master">Master</option>
+                            <option value="PHD">PHD</option>
                         </select>
                     </div>
 
                     <div class="col-md-4">
-                        <label for="tittle" class="form-label">Jenis Kelamin</label>
+                        <label for="tittle" class="form-label">Gender</label>
                         <div class="col-md-12">
                             <div class="form-check form-check-inline">
-                                <label class="form-check-label" for="jenis_kelamin">Laki-Laki</label>
-                                <input class="form-check-input" type="radio" name="jenis_kelamin" value="Laki-Laki">
+                                <label class="form-check-label" for="Gender">Male</label>
+                                <input class="form-check-input" type="radio" name="Gender" value="Male">
                             </div>
                             <div class="form-check form-check-inline">
-                                <label class="form-check-label" for="jenis_kelamin">Perempuan</label>
-                                <input class="form-check-input" type="radio" name="jenis_kelamin" value="Perempuan">
+                                <label class="form-check-label" for="Gender">Female</label>
+                                <input class="form-check-input" type="radio" name="Gender" value="Female">
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-6">
-                        <label for="Jurusan" class="form-label">Jurusan</label>
-                        <input type="text" name="jurusan" class="form-control" placeholder="Ilmu Komputer" required>
+                        <label for="Major" class="form-label">Major</label>
+                        <input type="text" name="Major" class="form-control" placeholder="IT" required>
                     </div>
 
                     <div class="col-md-6">
-                        <label for="IPK" class="form-label">IPK</label>
-                        <input type="number" step=0.01 name="IPK" class=" form-control" placeholder="3.52" required>
+                        <label for="GDP" class="form-label">GDP</label>
+                        <input type="number" step=0.01 name="GDP" class=" form-control" placeholder="3.52" required>
                     </div>
 
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary" value="daftar" name="tambah"><i class="fa fa-plus"></i><span class="ms-2">Tambah Data</span></button>
+                        <button type="submit" class="btn btn-primary" value="daftar" name="tambah"><i class="fa fa-plus"></i><span class="ms-2">Add Data</span></button>
                     </div>
                 </form>
             </div>
@@ -128,12 +127,12 @@
 
 
         <!-- judul tabel -->
-        <h5 class="mb-3">Daftar Mahasiswa Saya</h5>
+        <h5 class="mb-3">My users list</h5>
 
         <div class="row my-3">
             <div class="col-md-2 mb-3">
                 <select class="form-select" aria-label="Default select example">
-                    <option selected>Tampilkan Entri</option>
+                    <option selected>Show Entries</option>
                     <option value="10">10</option>
                     <option value="25">25</option>
                     <option value="50">50</option>
@@ -190,12 +189,12 @@
             echo "<thead>";
             echo "<tr>";
             echo "<th scope='col' class='text-center'>No</th>";
-            echo "<th scope='col'>Nama</th>";
-            echo "<th scope='col'>NIM</th>";
-            echo "<th scope='col'>Jenis Kelamin</th>";
-            echo "<th scope='col'>Jurusan</th>";
-            echo "<th scope='col'>Agama</th>";
-            echo "<th scope='col'>IPK</th>";
+            echo "<th scope='col'>name</th>";
+            echo "<th scope='col'>Number</th>";
+            echo "<th scope='col'>Gender</th>";
+            echo "<th scope='col'>Major</th>";
+            echo "<th scope='col'>Education</th>";
+            echo "<th scope='col'>GDP</th>";
             echo "<th scope='col' class='text-center'>Opsi</th>";
             echo "</tr>";
             echo "</thead>";
@@ -210,29 +209,29 @@
             $previous = $halaman - 1;
             $next = $halaman + 1;
 
-            $data = mysqli_query($db, "SELECT * FROM mahasiswa");
+            $data = mysqli_query($db, "SELECT * FROM users");
             $jumlah_data = mysqli_num_rows($data);
             $total_halaman = ceil($jumlah_data / $batas);
 
-            $data_mhs = mysqli_query($db, "SELECT * FROM mahasiswa LIMIT $halaman_awal, $batas");
+            $data_mhs = mysqli_query($db, "SELECT * FROM users LIMIT $halaman_awal, $batas");
             $no = $halaman_awal + 1;
 
-            // $sql = "SELECT * FROM mahasiswa";
+            // $sql = "SELECT * FROM users";
             // $query = mysqli_query($db, $sql);
 
 
 
 
-            while ($mahasiswa = mysqli_fetch_array($data_mhs)) {
+            while ($users = mysqli_fetch_array($data_mhs)) {
                 echo "<tr>";
-                echo "<td style='display:none'>" . $mahasiswa['id'] . "</td>";
+                echo "<td style='display:none'>" . $users['id'] . "</td>";
                 echo "<td class='text-center'>" . $no++ . "</td>";
-                echo "<td>" . $mahasiswa['nama'] . "</td>";
-                echo "<td>" . $mahasiswa['NIM'] . "</td>";
-                echo "<td>" . $mahasiswa['jenis_kelamin'] . "</td>";
-                echo "<td>" . $mahasiswa['jurusan'] . "</td>";
-                echo "<td>" . $mahasiswa['agama'] . "</td>";
-                echo "<td>" . $mahasiswa['IPK'] . "</td>";
+                echo "<td>" . $users['name'] . "</td>";
+                echo "<td>" . $users['Number'] . "</td>";
+                echo "<td>" . $users['Gender'] . "</td>";
+                echo "<td>" . $users['Major'] . "</td>";
+                echo "<td>" . $users['Education'] . "</td>";
+                echo "<td>" . $users['GDP'] . "</td>";
 
                 echo "<td class='text-center'>";
 
@@ -283,14 +282,14 @@
             <div class='modal-dialog' style="margin-bottom:100px !important;">
                 <div class='modal-content'>
                     <div class='modal-header'>
-                        <h5 class='modal-title' id='exampleModalLabel'>Edit Data Mahasiswa</h5>
+                        <h5 class='modal-title' id='exampleModalLabel'>Edit Data users</h5>
                         <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
                     </div>
 
                     <?php
-                    $sql = "SELECT * FROM mahasiswa";
+                    $sql = "SELECT * FROM users";
                     $query = mysqli_query($db, $sql);
-                    $mahasiswa = mysqli_fetch_array($query);
+                    $users = mysqli_fetch_array($query);
                     ?>
 
                     <form action='edit.php' method='POST'>
@@ -298,37 +297,36 @@
                             <input type='hidden' name='edit_id' id='edit_id'>
 
                             <div class="col-12 mb-3">
-                                <label for="edit_nama" class="form-label">Nama</label>
-                                <input type="text" name="edit_nama" id="edit_nama" class="form-control" placeholder="Steve Jobs" required>
+                                <label for="edit_name" class="form-label">name</label>
+                                <input type="text" name="edit_name" id="edit_name" class="form-control" placeholder="Steve Jobs" required>
                             </div>
                             <div class="col-12 mb-3">
-                                <label for="edit_NIM" class="form-label">NIM</label>
-                                <input type="text" name="edit_NIM" id="edit_NIM" class="form-control" placeholder="G64190021" required>
+                                <label for="edit_Number" class="form-label">Number</label>
+                                <input type="text" name="edit_Number" id="edit_Number" class="form-control" placeholder="G64190021" required>
                             </div>
 
                             <div class="col-12 mb-3">
-                                <label for="edit_agama" class="form-label">Agama</label>
-                                <select class="form-select" name="edit_agama" id="edit_agama" aria-label="Default select example">
-                                    <option value="Hindu">Hindu</option>
-                                    <option value="Buddha">Buddha</option>
-                                    <option value="Islam">Islam</option>
-                                    <option value="Konghucu">Konghucu</option>
-                                    <option value="Protestan">Protestan</option>
-                                    <option value="Katolik">Katolik</option>
+                                <label for="edit_Education" class="form-label">Education</label>
+                                <select class="form-select" name="edit_Education" id="edit_Education" aria-label="Default select example">
+                                    <option value="High school">High school</option>
+                                    <option value="Bachelor">Bachelor</option>
+                                    <option value="Graduate">Graduate</option>
+                                    <option value="Master">Master</option>
+                                    <option value="PHD">PHD</option>
                                 </select>
                             </div>
 
 
                             <div class="col-12 mb-3">
-                                <label for="edit_jenis_kelamin" class="form-label">Jenis Kelamin</label>
+                                <label for="edit_Gender" class="form-label">Gender</label>
                                 <div class="col-md-12" id="gender">
                                     <div class="form-check form-check-inline">
-                                        <label class="form-check-label" for="jenis_kelamin">
-                                            <input class="form-check-input" type="radio" name="edit_jenis_kelamin" value="Laki-Laki" id="cowok">Laki-Laki</label>
+                                        <label class="form-check-label" for="Gender">
+                                            <input class="form-check-input" type="radio" name="edit_Gender" value="Male" id="cowok">Male</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <label class="form-check-label" for="jenis_kelamin">
-                                            <input class="form-check-input" type="radio" name="edit_jenis_kelamin" value="Perempuan" id="cewek">Perempuan</label>
+                                        <label class="form-check-label" for="Gender">
+                                            <input class="form-check-input" type="radio" name="edit_Gender" value="Female" id="cewek">Female</label>
                                     </div>
                                 </div>
                             </div>
@@ -336,19 +334,19 @@
 
 
                             <div class="col-12 mb-3">
-                                <label for="edit_urusan" class="form-label">Jurusan</label>
-                                <input type="text" name="edit_jurusan" class="form-control" id="edit_jurusan" placeholder="Ilmu Komputer" required>
+                                <label for="edit_urusan" class="form-label">Major</label>
+                                <input type="text" name="edit_Major" class="form-control" id="edit_Major" placeholder="IT" required>
                             </div>
 
                             <div class="col-12 mb-3">
-                                <label for="edit_ipk" class="form-label">IPK</label>
-                                <input type="number" step=0.01 name="edit_ipk" id="edit_ipk" class=" form-control" placeholder="3.52" required>
+                                <label for="edit_GDP" class="form-label">GDP</label>
+                                <input type="number" step=0.01 name="edit_GDP" id="edit_GDP" class=" form-control" placeholder="3.52" required>
                             </div>
 
                         </div>
 
                         <div class='modal-footer'>
-                            <button type='submit' name='edit_data' class='btn btn-primary'>Simpan</button>
+                            <button type='submit' name='edit_data' class='btn btn-primary'>Save</button>
                         </div>
 
                     </form>
@@ -364,7 +362,7 @@
             <div class='modal-dialog'>
                 <div class='modal-content'>
                     <div class='modal-header'>
-                        <h5 class='modal-title' id='exampleModalLabel'>Konfirmasi</h5>
+                        <h5 class='modal-title' id='exampleModalLabel'>Confirm</h5>
                         <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
                     </div>
 
@@ -373,11 +371,11 @@
 
                         <div class='modal-body text-start'>
                             <input type='hidden' name='delete_id' id='delete_id'>
-                            <p>Yakin ingin menghapus data ini?</p>
+                            <p>Are you sure you want to delete this data?</p>
                         </div>
 
                         <div class='modal-footer'>
-                            <button type='submit' name='deletedata' class='btn btn-primary'>Hapus</button>
+                            <button type='submit' name='deletedata' class='btn btn-primary'>Wipe</button>
                         </div>
 
                     </form>
@@ -417,19 +415,19 @@
                 $('#edit_id').val(data[0]);
                 // gak dipake, karena cuma increment number
                 // $('#no').val(data[1]);
-                $('#edit_nama').val(data[2]);
-                $('#edit_NIM').val(data[3]);
+                $('#edit_name').val(data[2]);
+                $('#edit_Number').val(data[3]);
                 $('#gender').val(data[4]);
-                // jenis kelamin checked
-                if (data[4] == "Laki-Laki") {
+                // Gender checked
+                if (data[4] == "Male") {
                     $("#cowok").prop("checked", true);
                 } else {
                     $("#cewek").prop("checked", true);
                 }
 
-                $('#edit_jurusan').val(data[5]);
-                $('#edit_agama').val(data[6]);
-                $('#edit_ipk').val(data[7]);
+                $('#edit_Major').val(data[5]);
+                $('#edit_Education').val(data[6]);
+                $('#edit_GDP').val(data[7]);
             });
         });
     </script>

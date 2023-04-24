@@ -5,16 +5,16 @@ include("./config.php");
 if (isset($_POST['edit_data'])) {
     // ambil data dari form
     $id = $_POST['edit_id'];
-    $nama = $_POST['edit_nama'];
-    $NIM = $_POST['edit_NIM'];
-    $jenis_kelamin = $_POST['edit_jenis_kelamin'];
-    $jurusan = $_POST['edit_jurusan'];
-    $agama = $_POST['edit_agama'];
-    $IPK = $_POST['edit_ipk'];
+    $name = $_POST['edit_name'];
+    $Number = $_POST['edit_Number'];
+    $Gender = $_POST['edit_Gender'];
+    $Major = $_POST['edit_Major'];
+    $Education = $_POST['edit_Education'];
+    $GPA = $_POST['edit_GPA'];
 
 
     // query
-    $sql = "UPDATE mahasiswa SET nama='$nama', NIM='$NIM', jenis_kelamin='$jenis_kelamin', jurusan='$jurusan', agama='$agama', IPK='$IPK' WHERE id = '$id'";
+    $sql = "UPDATE users SET name='$name', Number='$Number', Gender='$Gender', Major='$Major', Education='$Education', GPA='$GPA' WHERE id = '$id'";
     $query = mysqli_query($db, $sql);
 
     // cek apa query berhasil disimpan?

@@ -27,22 +27,21 @@ SET time_zone = "+00:00";
 -- Table structure for table `mahasiswa`
 --
 
-CREATE TABLE `mahasiswa` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `nama` varchar(100) NOT NULL,
-  `NIM` varchar(12) NOT NULL,
-  `jenis_kelamin` enum('Laki-Laki','Perempuan') NOT NULL,
-  `jurusan` varchar(255) NOT NULL,
-  `agama` enum('Hindu','Buddha','Islam','Konghucu','Protestan','Katolik') NOT NULL,
-  `IPK` float UNSIGNED NOT NULL
+  `name` varchar(100) NOT NULL,
+  `Number` varchar(12) NOT NULL,
+  `Gender` enum('Male','Female') NOT NULL,
+  `Major` varchar(255) NOT NULL,
+  `Education` enum('High school','Bachelor','Graduate','Master','PHD') NOT NULL,
+  `GPA` float UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 --
 -- Dumping data for table `mahasiswa`
 --
 
-INSERT INTO `mahasiswa` (`id`, `nama`, `NIM`, `jenis_kelamin`, `jurusan`, `agama`, `IPK`) VALUES
-(1, 'John Smith', '123', 'Laki-Laki', 'Ilmu Komputer', 'Hindu', 3.9);
+INSERT INTO `users` (`id`, `name`, `Number`, `Gender`, `Major`, `Education`, `GPA`) VALUES
+(1, 'John Smith', '123', 'Male', 'Computer science', 'Bachelor', 13.5);
 
 --
 -- Indexes for dumped tables
@@ -51,10 +50,8 @@ INSERT INTO `mahasiswa` (`id`, `nama`, `NIM`, `jenis_kelamin`, `jurusan`, `agama
 --
 -- Indexes for table `mahasiswa`
 --
-ALTER TABLE `mahasiswa`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `NIM_unique` (`NIM`);
-
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
 --
 -- AUTO_INCREMENT for dumped tables
 --
@@ -62,7 +59,7 @@ ALTER TABLE `mahasiswa`
 --
 -- AUTO_INCREMENT for table `mahasiswa`
 --
-ALTER TABLE `mahasiswa`
+ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
